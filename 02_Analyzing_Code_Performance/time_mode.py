@@ -1,5 +1,6 @@
-import numpy as np
 import timeit
+
+import numpy as np
 
 random_integers = np.random.randint(1, 100_000, 1000)
 
