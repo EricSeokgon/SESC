@@ -1,6 +1,7 @@
+import numpy as np
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
-import numpy as np
+
 
 def detect_similar_sentences(doc1, doc2, similarity_threshold=0.5):
     """

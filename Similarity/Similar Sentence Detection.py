@@ -1,6 +1,7 @@
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
 
+
 # 두 문서의 유사한 문장을 검출하는 함수
 def find_similar_sentences(doc1, doc2, threshold=0.8):
     """
@@ -35,6 +36,7 @@ def find_similar_sentences(doc1, doc2, threshold=0.8):
                 similar_pairs.append((sentences1[i], sentences2[j], score))
 
     return similar_pairs
+
 
 # 테스트용 문서
 # doc1 = "Machine learning is a field of artificial intelligence. It focuses on learning from data."
