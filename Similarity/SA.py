@@ -1,4 +1,5 @@
 import nltk
+nltk.download('punkt_tab') # Downloading 'punkt_tab' dataset
 from nltk.tokenize import sent_tokenize
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
