@@ -37,8 +37,19 @@ def find_similar_sentences(doc1, doc2, threshold=0.8):
     return similar_pairs
 
 # 테스트용 문서
-doc1 = "Machine learning is a field of artificial intelligence. It focuses on learning from data."
-doc2 = "Artificial intelligence includes machine learning. It emphasizes understanding data."
+# doc1 = "Machine learning is a field of artificial intelligence. It focuses on learning from data."
+# doc2 = "Artificial intelligence includes machine learning. It emphasizes understanding data."
+doc1 = """
+    인공지능은 현대 기술의 핵심입니다.
+    딥러닝은 인공지능의 중요한 분야입니다.
+    머신러닝은 데이터로부터 학습합니다.
+"""
+
+doc2 = """
+    인공지능 기술은 현대 사회의 핵심 기술입니다.
+    딥러닝은 인공지능 발전의 핵심 분야입니다.
+    데이터 과학은 중요한 연구 분야입니다.
+"""
 
 # 유사한 문장 검출
 similar_sentences = find_similar_sentences(doc1, doc2, threshold=0.5)
