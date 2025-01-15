@@ -20,13 +20,22 @@ def vectorize_sentences(sentences1, sentences2):
 
 # 유사도 계산 및 유사한 문장 검출
 def find_similar_sentences(tfidf_matrix, sentences1, sentences2, threshold=0.5):
+    # Compute the cosine similarity matrix for the TF-IDF representations
     similarity_matrix = cosine_similarity(tfidf_matrix)
+
+    # Number of sentences in the first document
     n = len(sentences1)
+
+    # List to hold pairs of similar sentences
     similar_pairs = []
 
+    # Iterate over each sentence in the first document
     for i in range(n):
+        # Iterate over each sentence in the second document
         for j in range(n, len(sentences1) + len(sentences2)):
+            # Check if the similarity score is above the threshold
             if similarity_matrix[i][j] > threshold:
+                # Append the pair of sentences and their similarity score to the list
                 similar_pairs.append((sentences1[i], sentences2[j-n], similarity_matrix[i][j]))
 
     return similar_pairs
